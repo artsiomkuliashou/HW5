@@ -37,8 +37,8 @@ fi
 
 # Проверка длины строки
 string_length=${#string}
-if [ "$string_length" -le "$max_num" ]; then
-    echo "Ошибка: длина строки ($string_length) должна быть больше чем любое из чисел аргументов ($max_num)" >&2
+if [ "$string_length" -lt "$max_num" ]; then
+    echo "Ошибка: длина строки ($string_length) должна быть больше или равна максимальному числу ($max_num)" >&2
     exit 1
 fi
 
